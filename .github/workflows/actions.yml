@@ -1,11 +1,11 @@
 name: custom runner
 on:
   push:
-    branch:
+    branches:
       - main
 jobs:
   linux-runner-check:
-  runs-on: self-hosted
-  steps:
-    - run: echo 'hello world'
-    - run: echo $HOSTNAME
+    runs-on: [self-hosted]
+    steps:
+      - run: echo 'hello world'
+      - run: echo $HOSTNAME
